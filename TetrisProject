@@ -1,0 +1,187 @@
+/**
+ *
+ * @author justin
+ */
+
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+
+
+public class TetrisProject //equivalent of TetrisWindow which is in charge of running the wholw app.
+{
+
+    public TetrisProject(){
+        
+    }
+    
+    public static void main(String[] args) {
+        TetrisProject app = new TetrisProject();
+    }
+    
+}
+
+class TetrisDisplay {
+    
+    String[] Colors = {"red", "blue", "yellow", "magenta", "green"};
+    TetrisGame game;
+    //Timer timer;
+    int start_y, start_x, cell_size, speed;
+    
+    
+    public TetrisDisplay(TetrisGame gam){
+        gam = this.game;
+    }
+    
+    public void cycleMove(){}
+    
+    public void paintComponent(Graphics g){}
+    
+    private void drawFallingBrick(){}
+    
+    private void drawWell(){}
+    
+    
+    
+    
+}
+
+class TetrisGame {
+    
+    TetrisBrick fallingBrick;
+    int rows, cols, numBrickTypes;
+    Random randGen;
+    
+    public TetrisGame(){
+        
+    }
+    
+    private void spawnBrick(){}
+    
+    public void makeMove(){};
+    
+    private void validateMove(){};
+    
+    public int getFallingBrickColor(){
+        return 0;
+    };
+    
+    public int getNumberSegs(){
+        return 0;
+    };
+    
+    public int getSegRow(){
+        return 0;
+    }
+    
+    public int getSegCol(){
+        return 0;
+    }
+    
+}
+
+abstract class TetrisBrick {
+    int[][] position;
+    final int numSegments = 4;
+    int colorNum;
+    Color color;
+    
+    public TetrisBrick(int[][] pos, int colNum){
+        pos = this.position;
+        colNum = this.colorNum;
+        
+    }
+    
+    public void moveUp(int row){
+        for(int i = 0; i < numSegments; i++){
+            //position = position[i][row -1];
+        }
+    }
+    
+    public void moveDown(){}
+    
+    public void getColorNumber(){}
+    
+    public void initPosition(){}
+   
+}
+
+class ElfBrick extends TetrisBrick
+{
+    int position[][];
+    public ElfBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+        pos = this.position;
+    }
+    
+    @Override
+    public void initPosition(){}
+    //position = position{[], [], [],[]};
+}
+
+class JayBrick extends TetrisBrick{
+    
+    public JayBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
+
+class EssBrick extends TetrisBrick{
+    
+    public EssBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
+
+class ZeeBrick extends TetrisBrick{
+    
+    public ZeeBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
+
+class StackBrick extends TetrisBrick{
+    
+    public StackBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
+
+class SquareBrick extends TetrisBrick{
+    
+    public SquareBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
+
+class LongBrick extends TetrisBrick{
+    
+    public LongBrick(int[][] pos, int colNum) {
+        super(pos, colNum);
+    }
+    
+    @Override
+    public void initPosition(){}
+    
+}
